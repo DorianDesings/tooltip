@@ -1,0 +1,83 @@
+body {
+  display: grid;
+  place-items: top center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  color: aqua;
+  background-color: #333;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover + .tooltip-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltip-content {
+  position: absolute;
+  right: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 200px;
+  font-size: 0.5rem;
+  background-color: #666;
+  color: lightgreen;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.tooltip-content__text {
+  padding: 5px 10px;
+}
+.tooltip-content__img {
+  max-width: 100px;
+}
+
+/* .box {
+  border-top: 100px solid lightcoral;
+  border-left: 100px solid transparent;
+  /* border-bottom: 100px solid lightgray; */
+/* border-right: 100px solid transparent; */
+/* } */
+
+/* .tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+.tooltip::before,
+.tooltip::after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip::before {
+  content: 'HOLA CHARMANDER';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  font-size: 0.7rem;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.tooltip::after {
+  width: 20px;
+  height: 20px;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  background-color: #fff;
+  z-index: -1;
+} */
